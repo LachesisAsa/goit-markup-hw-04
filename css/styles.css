@@ -7,6 +7,7 @@
 /* футер background  #2F303A; */
 /* вторинний фоновий колір   #f5f4fa; */
 /* білий колір тексту  #FFFFFF*/
+/* колір ссило #AFB1B8 */
 
 /* Стилі - головна сторінка */
 
@@ -19,6 +20,7 @@
   --footer-hero-bg-color: #2f303a;
   --footer-contacts-text: rgba(255, 255, 255, 0.6);
   --white-color-text: #ffffff;
+  --social-color: #afb1b8;
 }
 
 body {
@@ -79,6 +81,12 @@ h6,
 p {
   margin: 0;
 }
+
+.section {
+  padding-bottom: 94px;
+  padding-top: 94px;
+}
+
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> header >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 .top-line-bg {
   border-bottom: 1px solid #ececec;
@@ -123,7 +131,6 @@ p {
   padding-bottom: 32px;
   color: var(--primary-text-color);
   font-weight: 500;
-  font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
@@ -149,30 +156,38 @@ p {
   padding-bottom: 32px;
   color: var(--title-text-color);
   font-weight: 500;
-  font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  display: inline-flex;
+  align-items: center;
 }
 
 .auth-nav a:hover,
-.auth-nav a:focus,
-.auth-nav a:hover,
 .auth-nav a:focus {
   color: var(--accent-color);
+  fill: var(--accent-color);
 }
-.section {
-  padding-bottom: 94px;
-  padding-top: 94px;
+.icon-envelope,
+.icon-smartphone {
+  margin-right: 10px;
 }
+
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Main >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> section hero >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 
 .hero {
   background: var(--footer-hero-bg-color);
-  text-align: center;
+  max-width: 1600px;
   padding-top: 200px;
   padding-bottom: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/Img\(hero\).jpg);
+  background-size: cover;
+  background-position: center;
 }
 
 .hero .title {
@@ -205,7 +220,6 @@ p {
   margin-bottom: 10px;
   color: var(--primary-text-color);
   font-weight: 700;
-  font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
 }
@@ -217,11 +231,20 @@ p {
 .feature-liste .item:not(:last-child) {
   margin-right: 30px;
 }
+.item-icon {
+  display: flex;
+  margin-bottom: 30px;
+  width: 270px;
+  height: 120px;
+  background-color: var(--secondary-bg-color);
+  border-radius: 4px;
+  align-items: center;
+  justify-content: center;
+}
 
 .feature-liste .text {
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 14px;
   line-height: 1.71;
 }
 
@@ -275,6 +298,7 @@ p {
 .team-liste .item:not(:last-child) {
   margin-right: 30px;
 }
+
 .team-liste .item {
   text-align: center;
   background: #ffffff;
@@ -293,11 +317,84 @@ p {
 .team-liste .text {
   font-size: 16px;
   line-height: 1.19;
+  margin-bottom: 16px;
 }
 .item .title-text {
   padding-top: 30px;
   padding-bottom: 30px;
 }
+.social-icon {
+  fill: var(--social-color);
+}
+.section-team .social-links {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border-radius: 50%;
+  border: none;
+  width: 44px;
+  height: 44px;
+  background-color: var(--white-color-text);
+}
+.section-team .social-links:hover {
+  background-color: var(--accent-color);
+  fill: var(--white-color-text);
+}
+.section-team .social-links:focus {
+  background-color: var(--accent-color);
+  fill: var(--white-color-text);
+}
+.social-icon:hover {
+  background-color: var(--accent-color);
+  fill: var(--white-color-text);
+}
+.social-icon:focus {
+  background-color: var(--accent-color);
+  fill: var(--white-color-text);
+}
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> regular customers >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+.customers {
+  text-align: center;
+}
+.customers .title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  color: #212121;
+  margin-bottom: 50px;
+}
+.customers-descrip {
+  display: inline-flex;
+  width: 170px;
+  height: 92px;
+  border: 1px solid var(--social-color);
+  border-radius: 4px;
+  align-items: center;
+  justify-content: center;
+}
+.customers .customers-descrip:not(:last-child) {
+  margin-right: 30px;
+}
+.icon-group1,
+.icon-group2,
+.icon-group3,
+.icon-group4,
+.icon-group5,
+.icon-group6 {
+  fill: var(--social-color);
+}
+.icon-group1:hover,
+.icon-group2:hover,
+.icon-group3:hover,
+.icon-group4:hover,
+.icon-group5:hover,
+.icon-group6:hover {
+  fill: var(--accent-color);
+}
+
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Footer >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 
 .footer {
@@ -313,14 +410,12 @@ p {
 
 .site-add .link {
   color: var(--white-color-text);
-  font-size: 14px;
   line-height: 1.14;
 }
 
 .site-add .mail,
 .site-add .tel {
   color: var(--footer-contacts-text);
-  font-size: 14px;
   line-height: 1.14;
 }
 
@@ -334,8 +429,40 @@ p {
 
 .address {
   font-style: normal;
+  display: flex;
 }
 
+.social {
+  margin-left: 70px;
+}
+.social .text {
+  margin-bottom: 20px;
+  color: var(--white-color-text);
+  line-height: 1.14;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: left;
+}
+.social .social-links {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.social-links {
+  padding: 0;
+  border-radius: 50%;
+  border: none;
+  width: 44px;
+  height: 44px;
+  color: var(--white-color-text);
+  background-color: var(--title-text-color);
+}
+.links-icon {
+  fill: var(--white-color-text);
+}
+.social-links:hover {
+  background-color: var(--accent-color);
+}
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> buttons >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 
 /* button-hero */
