@@ -63,10 +63,6 @@ body {
   width: 1200px;
 }
 
-.no-padding {
-  padding-top: 0;
-  padding-bottom: 0;
-}
 img {
   display: block;
   max-width: 100%;
@@ -179,6 +175,7 @@ p {
 .hero {
   background: var(--footer-hero-bg-color);
   max-width: 1600px;
+  height: 600px;
   padding-top: 200px;
   padding-bottom: 200px;
   margin-left: auto;
@@ -187,6 +184,7 @@ p {
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../images/Img\(hero\).jpg);
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
 }
 
@@ -207,7 +205,7 @@ p {
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> section specifics >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 
 .specifics .title {
-  margin-top: 0;
+  /* margin-top: 0; */
 }
 
 .feature-liste {
@@ -216,7 +214,7 @@ p {
 }
 
 .feature-liste .title {
-  margin-top: 0;
+  font-size: 14px;
   margin-bottom: 10px;
   color: var(--primary-text-color);
   font-weight: 700;
@@ -323,10 +321,16 @@ p {
   padding-top: 30px;
   padding-bottom: 30px;
 }
+.social-liste {
+  display: inline-flex;
+}
+.social-item:not(:last-child) {
+  margin-right: 10px;
+}
 .social-icon {
   fill: var(--social-color);
 }
-.section-team .social-links {
+.social-item .social-links {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -337,26 +341,26 @@ p {
   height: 44px;
   background-color: var(--white-color-text);
 }
-.section-team .social-links:hover {
+.social-item .social-links:hover {
   background-color: var(--accent-color);
   fill: var(--white-color-text);
 }
-.section-team .social-links:focus {
+.social-item .social-links:focus {
   background-color: var(--accent-color);
   fill: var(--white-color-text);
 }
-.social-icon:hover {
+.social-links .social-icon:hover {
   background-color: var(--accent-color);
   fill: var(--white-color-text);
 }
-.social-icon:focus {
+.social-links .social-icon:focus {
   background-color: var(--accent-color);
   fill: var(--white-color-text);
 }
 
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> regular customers >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
-.customers {
-  text-align: center;
+.customers-liste {
+  display: flex;
 }
 .customers .title {
   font-weight: 700;
@@ -394,6 +398,9 @@ p {
 .icon-group6:hover {
   fill: var(--accent-color);
 }
+.customers-descrip:hover {
+  border-color: var(--accent-color);
+}
 
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Footer >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 
@@ -401,6 +408,10 @@ p {
   background: var(--footer-hero-bg-color);
   padding-top: 60px;
   padding-bottom: 60px;
+}
+.footer .conteiner {
+  display: flex;
+  align-items: baseline;
 }
 
 .footer .logo {
@@ -429,7 +440,6 @@ p {
 
 .address {
   font-style: normal;
-  display: flex;
 }
 
 .social {
@@ -448,6 +458,9 @@ p {
   justify-content: center;
   align-items: center;
 }
+.social .social-links:not(:last-child) {
+  margin-right: 10px;
+}
 .social-links {
   padding: 0;
   border-radius: 50%;
@@ -460,7 +473,10 @@ p {
 .links-icon {
   fill: var(--white-color-text);
 }
-.social-links:hover {
+.social .social-links:hover {
+  background-color: var(--accent-color);
+}
+.social .social-links:focus {
   background-color: var(--accent-color);
 }
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> buttons >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
@@ -511,10 +527,17 @@ p {
   cursor: pointer;
 }
 
-.button:hover,
+.button:hover {
+  color: var(--white-color-text);
+  background: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
 .button:focus {
   color: var(--white-color-text);
   background: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> portfolio styles >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
@@ -569,4 +592,15 @@ p {
 .projects .text {
   font-size: 16px;
   line-height: 1.88;
+  color: var(--primary-text-color);
+}
+.projects .item:hover {
+  background: #ffffff;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.projects .item:focus {
+  background: #ffffff;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
