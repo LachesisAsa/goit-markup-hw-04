@@ -161,11 +161,11 @@ p {
 .auth-nav a:hover,
 .auth-nav a:focus {
   color: var(--accent-color);
-  fill: var(--accent-color);
 }
 .icon-envelope,
 .icon-smartphone {
   margin-right: 10px;
+  fill: currentColor;
 }
 
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Main >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
@@ -203,10 +203,6 @@ p {
 }
 
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> section specifics >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
-
-.specifics .title {
-  /* margin-top: 0; */
-}
 
 .feature-liste {
   display: flex;
@@ -328,34 +324,34 @@ p {
   margin-right: 10px;
 }
 .social-icon {
-  fill: var(--social-color);
+  fill: currentColor;
 }
 .social-item .social-links {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0;
   border-radius: 50%;
   border: none;
   width: 44px;
   height: 44px;
+  color: var(--social-color);
   background-color: var(--white-color-text);
 }
 .social-item .social-links:hover {
   background-color: var(--accent-color);
-  fill: var(--white-color-text);
+  color: var(--white-color-text);
 }
 .social-item .social-links:focus {
   background-color: var(--accent-color);
-  fill: var(--white-color-text);
+  color: var(--white-color-text);
 }
 .social-links .social-icon:hover {
   background-color: var(--accent-color);
-  fill: var(--white-color-text);
+  color: var(--white-color-text);
 }
 .social-links .social-icon:focus {
   background-color: var(--accent-color);
-  fill: var(--white-color-text);
+  color: var(--white-color-text);
 }
 
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> regular customers >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
@@ -370,14 +366,15 @@ p {
   color: #212121;
   margin-bottom: 50px;
 }
-.customers-descrip {
-  display: inline-flex;
+.customers-links {
+  display: flex;
   width: 170px;
   height: 92px;
   border: 1px solid var(--social-color);
   border-radius: 4px;
   align-items: center;
   justify-content: center;
+  color: var(--social-color);
 }
 .customers .customers-descrip:not(:last-child) {
   margin-right: 30px;
@@ -388,7 +385,7 @@ p {
 .icon-group4,
 .icon-group5,
 .icon-group6 {
-  fill: var(--social-color);
+  fill: currentColor;
 }
 .icon-group1:hover,
 .icon-group2:hover,
@@ -396,10 +393,13 @@ p {
 .icon-group4:hover,
 .icon-group5:hover,
 .icon-group6:hover {
-  fill: var(--accent-color);
-}
-.customers-descrip:hover {
   border-color: var(--accent-color);
+  color: var(--accent-color);
+}
+.customers-links:hover,
+.customers-links:focus {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
 }
 
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Footer >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
@@ -421,13 +421,13 @@ p {
 
 .site-add .link {
   color: var(--white-color-text);
-  line-height: 1.14;
+  line-height: 1.71;
 }
 
 .site-add .mail,
 .site-add .tel {
   color: var(--footer-contacts-text);
-  line-height: 1.14;
+  line-height: 1.71;
 }
 
 .site-add .link:hover,
@@ -468,7 +468,7 @@ p {
   width: 44px;
   height: 44px;
   color: var(--white-color-text);
-  background-color: var(--title-text-color);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 .links-icon {
   fill: var(--white-color-text);
@@ -594,12 +594,15 @@ p {
   line-height: 1.88;
   color: var(--primary-text-color);
 }
-.projects .item:hover {
+.projects-links {
+  display: block;
+}
+.projects-links:hover {
   background: #ffffff;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
-.projects .item:focus {
+.projects-links:focus {
   background: #ffffff;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
